@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Person.create(status: "out-of-date", severity: "low", my_id: 1)
+Person.create(status: "current", severity: "high", my_id: 2)
+Person.create(status: "out-of-date", severity: "high", my_id: 3)

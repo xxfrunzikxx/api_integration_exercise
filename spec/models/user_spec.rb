@@ -1,11 +1,9 @@
 require 'spec_helper'
 
 describe 'User' do
-  let!(:person) {Person.create({ severity: "high", status: "out-of-date"})}
-  let!(:user){User.create()}
+  let!(:user){ User.create(person_id: 1) }
 
   it 'should return same status' do
-    user.person_id = person.id
-    user.status.should eq(person.status)
+    user.status.should eq("out-of-date")
   end
 end
