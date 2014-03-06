@@ -3,6 +3,10 @@ class PersonsController < ActionController::Base
 
   def show
     person = Person.find_by_my_id(params[:id])
-    render json: { severity: person.severity, status: person.status }
+    if person
+      render json: { severity: person.severity, status: person.status }
+    else
+      render json: nil, status: 404
+    end
   end
 end

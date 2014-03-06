@@ -13,12 +13,7 @@ describe 'User' do
     user_1.severity.should eq("low")
   end
 
-  it 'should return same severity' do
-    user_3.severity.should eq("UNHANDLED ERROR")
-  end
-
-  it 'should return error' do
-    user_3.status.should eq("UNHANDLED ERROR")
-    user_3.status.should eq("UNHANDLED ERROR")
+  it 'should return not found when not found' do
+    user_3.severity.should eq("NOT FOUND")
   end
 end
